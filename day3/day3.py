@@ -52,7 +52,7 @@ def part2():
     for battery in batteries:
         # Select 12 digits to maximize the resulting number (greedy approach)
         n = len(battery)
-        k = 12  # number of digits to select
+        k = 12
         to_remove = n - k  # number of digits to skip
         
         result = []

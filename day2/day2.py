@@ -8,7 +8,7 @@
 # 1188511880-1188511890 has one invalid ID, 1188511885.
 # The task is to add up all the invalid IDs, for the example the answer should be 1227775554.
 
-# For part two an id is invalid if it is made only of some sequence of difits repeated at least twice
+# For part two an id is invalid if it is made only of some sequence of digits repeated at least twice
 # So, 12341234 (1234 two times)
 
 import sys

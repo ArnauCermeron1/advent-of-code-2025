@@ -3,6 +3,9 @@
 # In 987654321111111, you can make the largest joltage possible, 98, by turning on the first two batteries.
 # I cannot rearrange the batteries
 
+# For part 2, there will be 12 digits in each bank's joltage output instead of two.
+# In 818181911112111, the joltage 888911112111 is produced by turning on everything except some 1s near the front.
+
 import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -42,5 +45,30 @@ def part1():
     
     print(joltage)
 
+def part2():
+    batteries = parse_input('input.txt')
+    joltage = 0
+    
+    for battery in batteries:
+        # Select 12 digits to maximize the resulting number (greedy approach)
+        n = len(battery)
+        k = 12  # number of digits to select
+        to_remove = n - k  # number of digits to skip
+        
+        result = []
+        for digit in battery:
+            # Remove smaller digits from result if we have room to skip them
+            while result and result[-1] < digit and to_remove > 0:
+                result.pop()
+                to_remove -= 1
+            result.append(digit)
+        
+        # Take only the first k digits
+        max_value = int(''.join(result[:k]))
+        joltage += max_value
+    
+    print(joltage)
+
 
 part1()
+part2()

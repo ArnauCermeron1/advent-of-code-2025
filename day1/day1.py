@@ -3,6 +3,9 @@
 # Turning the dial left from 0 goes to 99 (one click left)
 # Turning the dial right from 99 goes to 0 (one click right)
 
+# For part 2, during the turn I have to check if it passes through 0, not only at the end
+# This can be checked by adding an if for every position (current position % 0 == 0)
+
 """
 L68
 L30

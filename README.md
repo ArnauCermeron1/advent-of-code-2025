@@ -27,7 +27,7 @@ Shared helpers (loading input, parsing utilities, etc.) are stored in `utils/uti
 
 * Keep the code readable and easy to follow.
 * Avoid unnecessary complexity unless the puzzle calls for it.
-* Make each day self-contained so it’s easy to revisit later.
+* Keep expanding my knowledge on python and all the possibilities it has.
 
 ## Notes
 
